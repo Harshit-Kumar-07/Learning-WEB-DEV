@@ -1,69 +1,72 @@
 *{
-    padding: 0;
-    margin: 0;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background-color: #b013dcdc;
     font-family: Arial, sans-serif;
+    background: linear-gradient(blue,lightblue,cyan,rgb(13, 173, 162));
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
-.container{
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    height: 500px;
-    width: 1000px;
-    color: white;
-    display: flex;
-    
-    align-items: center;
-    flex-direction: column;
-    border: 6px solid rgb(255, 255, 255);
-    display : grid;
-    grid-template-rows:repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(209,201,201,.7);
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    background-color:black;
+    padding:8px 16px;
+    border:1px solid black;
+    border-radius:100% 7px 100% 7px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    background:white;
+    color:black;
 }
 
 .box{
-    border: 8px solid rgb(201, 13, 160);
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
     
-    /* margin : 10px; */
-}
-.box:hover{
-
-    border: 8px solid rgb(201, 13, 160);
-    height: 300px;
-    width: 200px;
-    background-color: yellow;
-    border-radius: 30px;
-    transition: 0.5s;
-    box-shadow: 0px 0px 20px 10px rgb(13, 201, 63);
-    margin : 10px;
+    padding : 30px;
+    margin : 40px;
+    height : 300px;
+    width : 300px;
+    background-color: aquamarine;
+    animation-name : shubh-naam;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
-/* #c2{
-    border: 8px solid rgb(201, 13, 160);
-    height: 100px;
-    width: 100px;
-    background-color: rgb(238, 231, 236);
-    
-    margin : 10px;
+@keyframes shubh-naam{
+    25%{
+        border-radius : 0% 100% 0% 100%;
+        background-color: green;
+        
+    }
+    50%{
+        border-radius : 100% 0% 100% 0%;transform : scale(1.5);
+    }
+    75%{
+        border-radius : 0% 100% 0% 100%;
+        background-color: green;
+        
+    }
+    100%{
+        border-radius : 100% 0% 100% 0%;transform : scale(1.5);
+    }    
 }
-#c2:hover{
-
-    border: 8px solid rgb(201, 13, 160);
-    height: 300px;
-    width: 200px;
-    background-color: yellow;
-    border-radius: 30px;
-    transition: 0.5s;
-    box-shadow: 0px 0px 20px 10px rgb(13, 201, 63);
-    margin : 10px;
-} */
-
